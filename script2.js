@@ -1,30 +1,29 @@
 
-var datos = [{nombre: "cami", edad: 17},
+var vector = [{nombre: "cami", edad: 17},
                {nombre: "juan", edad: 27},
-               {nombre: "jhoselin", edad: 18}]
-
+               {nombre: "jhoselin", edad: 18}
+]
 
 function mostrar(){
 
-    var x = document.getElementById("id").value;
-
-    console.log(datos[x]);
-
-    var nombreDeAtributos = Object.keys(datos[x]);
-
-    console.log(nombreDeAtributos);
-
-    nombreDeAtributos.forEach(elementos => {
-
-        console.log(elementos);
-
-    })
-
-    
+    var id = document.getElementById("numero").value;
 
     var texto = document.getElementById("texto");
 
-    texto.innerText = x
+    
+    
+var atributos = Object.keys(vector[id]);
+
+texto.innerHTML="";
+
+atributos.forEach((elemento  ) => {
+
+    texto.innerHTML += elemento + ':' + vector [id][elemento] + '</br>'
+
+
+}) 
+
+   //   console.log(atributos);
 
 }
 
